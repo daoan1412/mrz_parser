@@ -13,6 +13,7 @@ class MRZResult {
     required this.expiryDate,
     required this.personalNumber,
     this.personalNumber2,
+    this.mrzKey
   });
 
   final String documentType;
@@ -26,6 +27,7 @@ class MRZResult {
   final DateTime expiryDate;
   final String personalNumber;
   final String? personalNumber2;
+  final String? mrzKey;
 
   @override
   bool operator ==(Object other) =>
@@ -42,7 +44,8 @@ class MRZResult {
           sex == other.sex &&
           expiryDate == other.expiryDate &&
           personalNumber == other.personalNumber &&
-          personalNumber2 == other.personalNumber2;
+          personalNumber2 == other.personalNumber2 &&
+          mrzKey == other.mrzKey;
 
   @override
   int get hashCode =>
@@ -56,5 +59,6 @@ class MRZResult {
       sex.hashCode ^
       expiryDate.hashCode ^
       personalNumber.hashCode ^
-      personalNumber2.hashCode;
+      personalNumber2.hashCode ^
+      mrzKey.hashCode;
 }

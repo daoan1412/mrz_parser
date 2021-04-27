@@ -117,6 +117,7 @@ class _TD1MRZFormatParser {
       expiryDate: expiryDate,
       personalNumber: optionalData,
       personalNumber2: optionalData2,
+      mrzKey: "$documentNumberFixed$documentNumberCheckDigitRaw$birthDateFixed$birthDateCheckDigitFixed$expiryDateFixed$expiryDateCheckDigitFixed"
     );
   }
 }
